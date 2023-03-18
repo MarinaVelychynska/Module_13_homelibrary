@@ -4,7 +4,6 @@ from app import db
 #add column borrowed, which shows: book is borrowed or staying on the shelf
 class Homelibrary(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    author = db.Column(db.String(100), index=True)
     title = db.Column(db.String(200), index=True, unique=True)
     borrowed = db.Column(db.Boolean, default=False)  
 
